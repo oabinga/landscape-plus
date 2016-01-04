@@ -51,6 +51,11 @@
   h1, h2, h3, h4, h5, h6
     line-height: line-height-title
     margin: line-height-title 0
+  h2
+    margin: 40px 10px 20px 0;
+    padding-left: 9px;
+    border-left: 6px solid #ff7e79;
+
   a
     color: color-link
     text-decoration: none
@@ -66,10 +71,32 @@
     margin: auto
   iframe
     border: none
-  table
-    width: 100%
-    border-collapse: collapse
-    border-spacing: 0
+  // table
+  //   width: 100%
+  //   border-collapse: collapse
+  //   border-spacing: 0
+  table {
+    margin: auto auto 1.234em;
+    width: 100%;
+    background: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+    th {
+        font-weight: bold;
+        padding: 5px 10px;
+        border-bottom: 2px solid #909ba2;
+    }
+    td {
+        padding: 5px 10px;
+    }
+    tr {
+        &:nth-child(2n) {
+            background: #f7f8f8;
+        }
+    }
+    }
+
   th
     font-weight: bold
     border-bottom: 3px solid color-border
@@ -397,3 +424,29 @@ $article-gallery-ctrl
   &:before
     content: "\f054"
     right: 15px*/
+
+/*toc*/
+.toc-article
+  background #eee
+  border 1px solid #bbb
+  border-radius 10px
+  margin 1.5em 0 0.3em 1.5em
+  padding 1.2em 1em 0 1em
+  max-width 28%
+
+.toc-title
+  font-size 120%
+
+#toc
+  line-height 1em
+  font-size 0.9em
+  float right
+  .toc
+    padding 0
+    margin 1em
+    line-height 1.8em
+    li
+      list-style-type none
+
+  .toc-child 
+    margin-left 1em
